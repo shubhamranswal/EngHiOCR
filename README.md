@@ -10,52 +10,82 @@ This is a web-based OCR application that can extract text from images containing
 - pytesseract
 - Tesseract OCR installed on your machine
 
-## Setup
+## Setup Instructions
 
-1. **Create a virtual environment:**
+Follow the steps below to set up and run the project locally.
 
-   ```bash
-   python -m venv ocr_project
-   ```
+### 1. Fork the Repository
 
-2. **Activate the virtual environment:**
+Fork this repository to your GitHub account by clicking the **Fork** button in the upper right corner of the GitHub page.
 
-   - On Windows:
-     ```bash
-     ocr_project\Scripts\activate
-     ```
-   - On macOS/Linux:
-     ```bash
-     source ocr_project/bin/activate
-     ```
+### 2. Clone Your Forked Repository
 
-3. **Install the required packages:**
+Clone the forked repository to your local machine and navigate into the project directory:
 
-   ```bash
-   pip install streamlit Pillow pytesseract
-   ```
+```bash
+git clone https://github.com/your-username/ocr_project.git cd ocr_project
+```
 
-4. **Install Tesseract OCR:**
-   - Follow the instructions for your OS:
-     - **Windows:** [Tesseract Installation Guide](https://github.com/tesseract-ocr/tesseract/wiki/Installation)
-     - **macOS:** You can install Tesseract using Homebrew:
-       ```bash
-       brew install tesseract
-       ```
-     - **Linux:** You can install Tesseract using apt:
-       ```bash
-       sudo apt install tesseract-ocr
-       ```
+Replace `yourusername` with your actual GitHub username.
+
+
+### 3. Create a Virtual Environment
+
+Set up a virtual environment to manage the project dependencies:
+
+```bash
+python -m venv ocr_project
+```
+
+Activate the virtual environment:
+
+- On macOS/Linux:
+
+```bash
+source ocr_project/bin/activate
+```
+
+- On Windows:
+
+```bash
+ocr_project\Scripts\activate
+```
+
+### 4. Install Dependencies
+
+Install the required dependencies listed in the `requirements.txt` file:
+
+```bash
+pip install -r requirements.txt
+```
+
+This will install:
+
+- `streamlit`: For building the web application.
+- `Pillow`: For handling image uploads and processing.
+- `pytesseract`: For performing OCR.
+
+### 5. Install Tesseract OCR
+
+Follow the instructions for your OS:
+
+- **Windows:** [Tesseract Installation Guide](https://github.com/tesseract-ocr/tesseract/wiki/Installation)
+- **macOS:** You can install Tesseract using Homebrew:
+  ```bash
+  brew install tesseract
+  ```
+- **Linux:** You can install Tesseract using apt:
+  ```bash
+  sudo apt install tesseract-ocr
+  ```
 
 ## Running the Application
 
 1. Make sure your virtual environment is activated.
 2. Run the Streamlit application:
-
    ```bash
    streamlit run app.py
    ```
-
 3. Open your web browser and navigate to `http://localhost:8501`.
 
 ## Features
@@ -91,7 +121,7 @@ To deploy this project, you can use Streamlit Cloud or Hugging Face Spaces.
 
 ### Deploying to Streamlit Cloud
 
-1. Push the code to a GitHub repository.
+1. Push the code to your GitHub repository.
 2. Go to [Streamlit Cloud](https://share.streamlit.io/).
 3. Sign in with your GitHub account.
 4. Select **Deploy an app** and connect your repository.
@@ -116,15 +146,3 @@ Once deployed, the app will be accessible via a live URL provided by Streamlit C
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-````
-
-### Final Steps
-1. **Create the Files**: In your `ocr_project` directory, create three separate files: `app.py`, `ocr_utils.py`, and `README.md`, and copy the corresponding content provided into each file.
-
-2. **Run Your Application**: After setting up the files, ensure your virtual environment is activated and run the Streamlit app using:
-   ```bash
-   streamlit run app.py
-````
-
-3. **Test Functionality**: Open a browser window at `http://localhost:8501` to interact with your OCR application.
