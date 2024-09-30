@@ -4,7 +4,6 @@ from PIL import Image
 
 # Load OCR model (For Tesseract, there's no specific model to load)
 def load_ocr_model():
-    pytesseract.pytesseract.tesseract_cmd = r'C:\\Users\\shubh\\Desktop\\Python\\OCR Reader\\Tesseract\\tesseract.exe'
     return None, None
 
 # Perform OCR and get bounding boxes
