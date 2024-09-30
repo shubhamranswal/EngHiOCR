@@ -44,14 +44,16 @@ if uploaded_image is not None:
         with st.spinner('Processing...'):
             extracted_text, boxes = perform_ocr(uploaded_image, processor, model)
 
+        # Show uploaded image
         st.image(uploaded_image, caption="Uploaded Image", use_column_width=True)
 
+        # Show extracted text
         st.subheader("Extracted Text:")
         st.write(extracted_text)
 
+        # Keyword search implementation
         keyword = st.text_input("Enter keyword to search:", key="keyword_input")
         search_button = st.button("Search")
-
         if search_button or (keyword and st.session_state.keyword_input):
             # Match word irrespective of case 
             pattern = re.compile(r'\b' + re.escape(keyword) + r'\b', re.IGNORECASE)

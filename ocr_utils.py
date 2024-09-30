@@ -1,6 +1,6 @@
 # Manage imports
 import pytesseract
-from PIL import Image, ImageDraw
+from PIL import Image
 
 # Load OCR model (For Tesseract, there's no specific model to load)
 def load_ocr_model():
