@@ -1,6 +1,6 @@
 # English - Hindi OCR Tool
 
-This is a web-based OCR application that can extract text from images containing both Hindi and English text. It also allows for keyword search functionality, highlighting the specified keywords in the uploaded images.
+This is a web-based Optical Character Recognition (OCR) application that can extract text from images containing both Hindi and English text. It also allows for keyword search functionality, highlighting specified keywords in the uploaded images.
 
 ## Requirements
 
@@ -8,7 +8,7 @@ This is a web-based OCR application that can extract text from images containing
 - Streamlit
 - Pillow
 - pytesseract
-- Tesseract OCR installed on your machine
+- Tesseract OCR (with Hindi language support) installed on your machine
 
 ## Setup Instructions
 
@@ -23,11 +23,11 @@ Fork this repository to your GitHub account by clicking the **Fork** button in t
 Clone the forked repository to your local machine and navigate into the project directory:
 
 ```bash
-git clone https://github.com/your-username/ocr_project.git cd ocr_project
+git clone https://github.com/your-username/ocr_project.git
+cd ocr_project
 ```
 
-Replace `yourusername` with your actual GitHub username.
-
+Replace `your-username` with your actual GitHub username.
 
 ### 3. Create a Virtual Environment
 
@@ -67,7 +67,7 @@ This will install:
 
 ### 5. Install Tesseract OCR
 
-Follow the instructions for your OS:
+Follow the instructions for your OS to install Tesseract OCR:
 
 - **Windows:** [Tesseract Installation Guide](https://github.com/tesseract-ocr/tesseract/wiki/Installation)
 - **macOS:** You can install Tesseract using Homebrew:
@@ -76,8 +76,10 @@ Follow the instructions for your OS:
   ```
 - **Linux:** You can install Tesseract using apt:
   ```bash
-  sudo apt install tesseract-ocr
+  sudo apt install tesseract-ocr tesseract-ocr-hin
   ```
+
+Make sure to include Hindi language support during installation.
 
 ## Running the Application
 
@@ -90,7 +92,7 @@ Follow the instructions for your OS:
 
 ## Features
 
-- **Upload an Image**: Allows you to upload image files (JPG, PNG).
+- **Upload an Image**: Allows you to upload image files (JPG, JPEG, PNG).
 - **Extract Text**: Uses OCR to extract text in Hindi and English from the uploaded image.
 - **Keyword Search**: Enter a keyword to search for its occurrences in the extracted text, with highlighted matches.
 
@@ -107,13 +109,9 @@ ocr_project/
 ├── app.py              # Main script for the Streamlit web application
 ├── ocr_utils.py        # Utility functions for OCR processing
 ├── requirements.txt    # Dependencies required for the project
-└── README.md           # Instructions on how to run and deploy the project
+├── packages.txt        # Packages for Tesseract installation
+└── LICENSE             # License information for the project
 ```
-
-- `app.py`: Contains the web application code for uploading images, performing OCR, and searching for keywords.
-- `ocr_utils.py`: Contains functions for loading the OCR model and performing text extraction.
-- `requirements.txt`: Lists all the libraries needed for the project.
-- `README.md`: This instruction file.
 
 ## Deployment
 
